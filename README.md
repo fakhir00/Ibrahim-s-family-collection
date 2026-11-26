@@ -1,6 +1,9 @@
-# Ibrahim's Family Collection — Online Store
+# Ibrahim's Family Collection — Design V3 · Logo Navy (dark)
 
-Family clothing store for **Ibrahim's Family Collection**, Faisalabad — Men / Women / Kids / Abaya, since 2015. Light-mode stitched theme (like MTJ / Nishat Linen), Cash on Delivery checkout.
+
+Family clothing store for **Ibrahim's Family Collection**, Faisalabad — **Ibrahim's Family Collection — Design V3 · Logo Navy (dark)**.
+
+Same 14 products, COD checkout and admin as the main site; only the theme differs. Backend is the same API routes with JSON/localStorage fallback — no durable hosted database connected yet (see Storage section). — Men / Women / Kids / Abaya, since 2015. Light-mode stitched theme (like MTJ / Nishat Linen), Cash on Delivery checkout.
 
 - **Store:** ABC Road, Near Ideal Bakery, Gulfishan Colony, Faisalabad, Pakistan
 - **Phone:** 0321-0066789 · **Email:** info@ibrahimsfc.com
