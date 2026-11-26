@@ -244,11 +244,11 @@ export default function Home() {
     <div>
       {/* Announcement bar */}
       <div style={{ background: '#100f2e', color: '#f2f35c', textAlign: 'center', padding: '8px 12px', fontSize: 13, fontWeight: 700, letterSpacing: '.04em', borderBottom: '2px dashed #c9a227' }}>
-        Winter Sale is on — up to {maxDiscount}% off selected styles &nbsp;·&nbsp; Cash on Delivery across Pakistan
+        Design V4 · Stitched Dark — Winter Sale is on — up to {maxDiscount}% off selected styles &nbsp;·&nbsp; Cash on Delivery across Pakistan
       </div>
 
       {/* Header */}
-      <header style={{ background: '#fff', borderBottom: '1px solid #e8e6df', position: 'sticky', top: 0, zIndex: 50 }}>
+      <header style={{ background: '#17163a', borderBottom: '1px solid #2a2950', position: 'sticky', top: 0, zIndex: 50 }}>
         <div style={{ maxWidth: 1180, margin: '0 auto', padding: '12px 16px', display: 'flex', alignItems: 'center', gap: 16, flexWrap: 'wrap' }}>
           <Link href="/" style={{ display: 'flex', alignItems: 'center', gap: 12, textDecoration: 'none' }}>
             <span style={{ background: '#100f2e', borderRadius: 10, padding: 5, display: 'inline-flex', border: '1px dashed #c9a227', outline: '1px solid #efe9d6', outlineOffset: 2 }}>
@@ -258,18 +258,18 @@ export default function Home() {
               <span className="serif" style={{ display: 'block', fontSize: 20, fontWeight: 700, lineHeight: 1.1 }}>
                 Ibrahim&rsquo;s Family Collection
               </span>
-              <span style={{ display: 'block', fontSize: 12, color: '#6b6a7d' }}>Family clothing · Faisalabad · Since 2015</span>
+              <span style={{ display: 'block', fontSize: 12, color: '#b9b7c9' }}>Family clothing · Faisalabad · Since 2015</span>
             </span>
           </Link>
 
-          <div style={{ flex: 1, minWidth: 200, display: 'flex', alignItems: 'center', border: '1.5px solid #e8e6df', borderRadius: 999, padding: '8px 14px', gap: 8 }}>
-            <span style={{ color: '#100f2e', display: 'inline-flex' }}><Icon d={ICONS.search} size={18} /></span>
+          <div style={{ flex: 1, minWidth: 200, display: 'flex', alignItems: 'center', border: '1.5px solid #2a2950', borderRadius: 999, padding: '8px 14px', gap: 8 }}>
+            <span style={{ color: '#f2f35c', display: 'inline-flex' }}><Icon d={ICONS.search} size={18} /></span>
             <input
               aria-label="Search products"
               value={search}
               onChange={(e) => setSearch(e.target.value)}
               placeholder="Search suits, kurtas, abayas, kids wear…"
-              style={{ border: 'none', outline: 'none', flex: 1, fontSize: 15, background: 'transparent' }}
+              style={{ border: 'none', outline: 'none', flex: 1, fontSize: 15, background: 'transparent', color: '#f4f2e8' }}
             />
           </div>
 
@@ -284,7 +284,7 @@ export default function Home() {
           <button className="btn btn-navy" style={{ padding: '9px 16px' }} onClick={() => setDrawerOpen(true)} aria-label="Open shopping bag">
             <Icon d={ICONS.bag} size={18} /> Bag ({cartCount})
           </button>
-          <Link href="/admin" style={{ fontSize: 14, fontWeight: 700, color: '#100f2e' }}>Admin</Link>
+          <Link href="/admin" style={{ fontSize: 14, fontWeight: 700, color: '#f2f35c' }}>Admin</Link>
         </div>
         <nav style={{ maxWidth: 1180, margin: '0 auto', padding: '0 16px 10px', display: 'flex', gap: 8, flexWrap: 'wrap' }}>
           <button className={`chip ${category === 'All' ? 'active' : ''}`} onClick={() => setCategory('All')}>All</button>
@@ -297,11 +297,11 @@ export default function Home() {
       {/* Hero */}
       <section className="hero-grid" style={{ maxWidth: 1180, margin: '0 auto', padding: '40px 16px 28px' }}>
         <div>
-          <span className="gold-label">Winter Collection · Faisalabad</span>
+          <span className="gold-label">Winter Collection · Faisalabad · Design V4 Stitched Dark</span>
           <h1 className="hero-title" style={{ fontSize: 56, lineHeight: 1.05, marginTop: 14 }}>
             Cozy. Simple. <span style={{ borderBottom: '4px dashed #c9a227' }}>Winter.</span>
           </h1>
-          <p style={{ fontSize: 18, color: '#6b6a7d', lineHeight: 1.6, maxWidth: 520 }}>
+          <p style={{ fontSize: 18, color: '#b9b7c9', lineHeight: 1.6, maxWidth: 520 }}>
             Warm, honest family clothing for Men, Women, Kids and Abaya — stitched with
             care, priced for the whole family. Shop online, pay cash on delivery.
           </p>
@@ -309,7 +309,7 @@ export default function Home() {
             <a className="btn btn-navy" href="#shop">Shop the Collection</a>
             <a className="btn btn-gold" href="#under999">Best Buys Under PKR 999</a>
           </div>
-          <p style={{ fontSize: 13, color: '#6b6a7d', marginTop: 14 }}>
+          <p style={{ fontSize: 13, color: '#b9b7c9', marginTop: 14 }}>
             Free delivery on orders over PKR 5,000 · Delivery PKR 250 otherwise · Easy 7-day exchange in store
           </p>
         </div>
@@ -325,12 +325,18 @@ export default function Home() {
       </section>
 
       {/* Ticker */}
-      <div style={{ background: '#f2f35c', borderTop: '2px dashed #c9a227', borderBottom: '2px dashed #c9a227', overflow: 'hidden', padding: '9px 0', fontWeight: 700, color: '#100f2e', fontSize: 14 }}>
+      <div style={{ background: '#f2f35c', borderTop: '2px dashed #c9a227', borderBottom: '2px dashed #c9a227', overflow: 'hidden', padding: '9px 0', fontWeight: 700, color: '#f2f35c', fontSize: 14 }}>
         <div className="ticker-track">
           {[...TICKER_ITEMS, ...TICKER_ITEMS].map((t, i) => (
             <span key={i}>{t} ·</span>
           ))}
         </div>
+      </div>
+
+      {/* Winter Edit banner — v4 stitched dark */}
+      <div style={{ background: '#c03128', color: '#fff', textAlign: 'center', padding: '16px', borderTop: '2px dashed #f2f35c', borderBottom: '2px dashed #f2f35c' }}>
+        <span className="serif" style={{ fontSize: 22, fontWeight: 700, color: '#fff' }}>THE WINTER EDIT</span>
+        <span style={{ display: 'block', fontSize: 13, marginTop: 4 }}>Bold winter warmth — up to {maxDiscount}% off · stitched with care in Faisalabad</span>
       </div>
 
       {/* Perks */}
@@ -341,9 +347,9 @@ export default function Home() {
           { icon: ICONS.refresh, title: 'Easy Exchange', text: '7-day exchange in store' },
           { icon: ICONS.shield, title: 'Quality Checked', text: 'Every piece checked before packing' },
         ].map((p) => (
-          <div key={p.title} className="stitch" style={{ borderRadius: 12, padding: 16, background: '#fff', display: 'flex', gap: 12, alignItems: 'flex-start' }}>
+          <div key={p.title} className="stitch" style={{ borderRadius: 12, padding: 16, background: '#17163a', display: 'flex', gap: 12, alignItems: 'flex-start' }}>
             <span style={{ color: '#c9a227', display: 'inline-flex' }}><Icon d={p.icon} size={24} /></span>
-            <span><strong style={{ display: 'block', color: '#100f2e' }}>{p.title}</strong><span style={{ fontSize: 13, color: '#6b6a7d' }}>{p.text}</span></span>
+            <span><strong style={{ display: 'block', color: '#f2f35c' }}>{p.title}</strong><span style={{ fontSize: 13, color: '#b9b7c9' }}>{p.text}</span></span>
           </div>
         ))}
       </section>
@@ -351,7 +357,7 @@ export default function Home() {
       {/* Categories */}
       <section style={{ maxWidth: 1180, margin: '0 auto', padding: '10px 16px 28px' }}>
         <h2 style={{ fontSize: 30 }}>Shop by Category</h2>
-        <p style={{ color: '#6b6a7d', marginTop: 6 }}>One store for the whole family — pick a category to start.</p>
+        <p style={{ color: '#b9b7c9', marginTop: 6 }}>One store for the whole family — pick a category to start.</p>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: 16, marginTop: 18 }}>
           {categories.map((c) => (
             <button
@@ -372,7 +378,7 @@ export default function Home() {
       </section>
 
       {/* Under 999 */}
-      <section id="under999" className="weave" style={{ borderTop: '1px solid #e8e6df', borderBottom: '1px solid #e8e6df' }}>
+      <section id="under999" className="weave" style={{ borderTop: '1px solid #2a2950', borderBottom: '1px solid #2a2950' }}>
         <div style={{ maxWidth: 1180, margin: '0 auto', padding: '30px 16px' }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', gap: 12, flexWrap: 'wrap' }}>
             <h2 style={{ fontSize: 30 }}>Best Buys Under PKR 999</h2>
@@ -396,7 +402,7 @@ export default function Home() {
       </section>
 
       {/* Full grid + filters */}
-      <section id="shop" className="weave" style={{ borderTop: '1px solid #e8e6df' }}>
+      <section id="shop" className="weave" style={{ borderTop: '1px solid #2a2950' }}>
         <div style={{ maxWidth: 1180, margin: '0 auto', padding: '30px 16px 48px' }}>
           <h2 style={{ fontSize: 30 }}>{showWishlistOnly ? 'Your Wishlist' : 'The Full Collection'}</h2>
           <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap', marginTop: 16, alignItems: 'center' }}>
@@ -411,7 +417,7 @@ export default function Home() {
               <option value="1999plus">PKR 1,999 and above</option>
             </select>
             {showWishlistOnly && <button className="chip" onClick={() => setShowWishlistOnly(false)}>Show all products</button>}
-            <span style={{ marginLeft: 'auto', color: '#6b6a7d', fontSize: 14 }}>{filtered.length} product{filtered.length === 1 ? '' : 's'}</span>
+            <span style={{ marginLeft: 'auto', color: '#b9b7c9', fontSize: 14 }}>{filtered.length} product{filtered.length === 1 ? '' : 's'}</span>
           </div>
           {loading ? (
             <p style={{ marginTop: 24 }}>Loading the collection…</p>
@@ -426,7 +432,7 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer style={{ background: '#fff', borderTop: '2px dashed #c9a227' }}>
+      <footer style={{ background: '#17163a', borderTop: '2px dashed #c9a227' }}>
         <div style={{ maxWidth: 1180, margin: '0 auto', padding: '36px 16px', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: 28 }}>
           <div>
             <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
@@ -435,20 +441,20 @@ export default function Home() {
               </span>
               <span className="serif" style={{ fontSize: 19, fontWeight: 700 }}>Ibrahim&rsquo;s Family Collection</span>
             </div>
-            <p style={{ color: '#6b6a7d', lineHeight: 1.6, fontSize: 14 }}>
+            <p style={{ color: '#b9b7c9', lineHeight: 1.6, fontSize: 14 }}>
               Family clothing for Men, Women, Kids and Abaya — serving Faisalabad since 2015.
             </p>
           </div>
           <div>
             <h3 style={{ fontSize: 17, marginBottom: 10 }}>Visit the Store</h3>
-            <p style={{ fontSize: 14, lineHeight: 1.7, color: '#6b6a7d', margin: 0 }}>
+            <p style={{ fontSize: 14, lineHeight: 1.7, color: '#b9b7c9', margin: 0 }}>
               {settings?.address || 'ABC Road, Near Ideal Bakery, Gulfishan Colony, Faisalabad, Pakistan'}
               <br />{settings?.hours || '10:00 AM to 8:00 PM Mon–Sat, closed Sundays'}
             </p>
           </div>
           <div>
             <h3 style={{ fontSize: 17, marginBottom: 10 }}>Get in Touch</h3>
-            <p style={{ fontSize: 14, lineHeight: 1.9, color: '#6b6a7d', margin: 0 }}>
+            <p style={{ fontSize: 14, lineHeight: 1.9, color: '#b9b7c9', margin: 0 }}>
               Phone: <a href="tel:03210066789">{settings?.phone || '0321-0066789'}</a><br />
               Email: <a href="mailto:info@ibrahimsfc.com">{settings?.email || 'info@ibrahimsfc.com'}</a><br />
               {settings?.facebook ? <a href={settings.facebook} target="_blank" rel="noreferrer">Facebook — 2,580 followers</a> : null}
@@ -456,14 +462,14 @@ export default function Home() {
           </div>
           <div>
             <h3 style={{ fontSize: 17, marginBottom: 10 }}>Shopping</h3>
-            <p style={{ fontSize: 14, lineHeight: 1.9, color: '#6b6a7d', margin: 0 }}>
+            <p style={{ fontSize: 14, lineHeight: 1.9, color: '#b9b7c9', margin: 0 }}>
               Cash on Delivery across Pakistan<br />
               Delivery PKR 250 · Free over PKR 5,000<br />
               Easy 7-day exchange in store
             </p>
           </div>
         </div>
-        <div style={{ borderTop: '1px dashed #c9a227', textAlign: 'center', padding: '14px 16px', fontSize: 13, color: '#6b6a7d' }}>
+        <div style={{ borderTop: '1px dashed #c9a227', textAlign: 'center', padding: '14px 16px', fontSize: 13, color: '#b9b7c9' }}>
           © {new Date().getFullYear()} Ibrahim&rsquo;s Family Collection · ibrahimsfc.com · Stitched with care in Faisalabad
         </div>
       </footer>
@@ -473,20 +479,20 @@ export default function Home() {
         <>
           <div className="overlay" onClick={() => setDrawerOpen(false)} />
           <aside className="drawer" aria-label="Shopping bag">
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '18px 20px', borderBottom: '1px solid #e8e6df' }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '18px 20px', borderBottom: '1px solid #2a2950' }}>
               <h2 style={{ fontSize: 22 }}>Your Bag ({cartCount})</h2>
               <button className="btn btn-ghost" style={{ padding: '8px 10px' }} onClick={() => setDrawerOpen(false)} aria-label="Close bag"><Icon d={ICONS.x} size={18} /></button>
             </div>
             <div style={{ flex: 1, overflow: 'auto', padding: 20 }}>
               {cart.length === 0 ? (
-                <p style={{ color: '#6b6a7d' }}>Your bag is empty. Add something cosy from the collection.</p>
+                <p style={{ color: '#b9b7c9' }}>Your bag is empty. Add something cosy from the collection.</p>
               ) : (
                 cart.map((line, i) => (
-                  <div key={i} style={{ display: 'flex', gap: 12, marginBottom: 16, borderBottom: '1px dashed #e8e6df', paddingBottom: 14 }}>
+                  <div key={i} style={{ display: 'flex', gap: 12, marginBottom: 16, borderBottom: '1px dashed #2a2950', paddingBottom: 14 }}>
                     <div style={{ width: 72, flexShrink: 0 }}><ProductImage product={line.product} height={84} /></div>
                     <div style={{ flex: 1 }}>
                       <strong style={{ fontSize: 14 }}>{line.product.name}</strong>
-                      <div style={{ fontSize: 13, color: '#6b6a7d' }}>{line.size}{line.colour ? ` · ${line.colour}` : ''}</div>
+                      <div style={{ fontSize: 13, color: '#b9b7c9' }}>{line.size}{line.colour ? ` · ${line.colour}` : ''}</div>
                       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: 6 }}>
                         <span>
                           <button className="chip" style={{ padding: '3px 10px' }} onClick={() => setQty(i, line.qty - 1)} aria-label="Decrease quantity">−</button>
@@ -507,7 +513,7 @@ export default function Home() {
                     <strong>{delivery === 0 ? 'FREE' : formatPKR(delivery)}</strong>
                   </div>
                   {subtotal < FREE_DELIVERY_THRESHOLD && (
-                    <div style={{ fontSize: 13, color: '#6b6a7d' }}>Add {formatPKR(FREE_DELIVERY_THRESHOLD - subtotal)} more for free delivery.</div>
+                    <div style={{ fontSize: 13, color: '#b9b7c9' }}>Add {formatPKR(FREE_DELIVERY_THRESHOLD - subtotal)} more for free delivery.</div>
                   )}
                   <div style={{ display: 'flex', justifyContent: 'space-between', borderTop: '2px dashed #c9a227', marginTop: 8, paddingTop: 8 }}>
                     <span>Total</span><strong style={{ fontSize: 18 }}>{formatPKR(total)}</strong>
@@ -516,18 +522,18 @@ export default function Home() {
               )}
             </div>
             {cart.length > 0 && !checkout && (
-              <div style={{ padding: 20, borderTop: '1px solid #e8e6df' }}>
+              <div style={{ padding: 20, borderTop: '1px solid #2a2950' }}>
                 <button className="btn btn-navy" style={{ width: '100%' }} onClick={() => setCheckout(true)}>Checkout — Cash on Delivery</button>
               </div>
             )}
             {cart.length > 0 && checkout && (
-              <form onSubmit={placeOrder} style={{ padding: 20, borderTop: '1px solid #e8e6df', display: 'grid', gap: 10 }}>
+              <form onSubmit={placeOrder} style={{ padding: 20, borderTop: '1px solid #2a2950', display: 'grid', gap: 10 }}>
                 <h3 style={{ fontSize: 18 }}>Cash on Delivery</h3>
                 <div><label className="lbl" htmlFor="co-name">Full name</label><input id="co-name" className="field" value={form.customer} onChange={(e) => setForm({ ...form, customer: e.target.value })} placeholder="Your full name" /></div>
                 <div><label className="lbl" htmlFor="co-phone">Phone</label><input id="co-phone" className="field" value={form.phone} onChange={(e) => setForm({ ...form, phone: e.target.value })} placeholder="03XX-XXXXXXX" /></div>
                 <div><label className="lbl" htmlFor="co-address">Delivery address</label><textarea id="co-address" className="field" rows={2} value={form.address} onChange={(e) => setForm({ ...form, address: e.target.value })} placeholder="House, street, area" /></div>
                 <div><label className="lbl" htmlFor="co-city">City</label><input id="co-city" className="field" value={form.city} onChange={(e) => setForm({ ...form, city: e.target.value })} placeholder="Faisalabad" /></div>
-                <p style={{ fontSize: 13, color: '#6b6a7d', margin: 0 }}>Pay in cash when your order arrives. Delivery {formatPKR(DELIVERY_FEE)} — free on orders over {formatPKR(FREE_DELIVERY_THRESHOLD)}.</p>
+                <p style={{ fontSize: 13, color: '#b9b7c9', margin: 0 }}>Pay in cash when your order arrives. Delivery {formatPKR(DELIVERY_FEE)} — free on orders over {formatPKR(FREE_DELIVERY_THRESHOLD)}.</p>
                 {formError && <p style={{ color: '#c03128', fontSize: 14, margin: 0 }}>{formError}</p>}
                 <button className="btn btn-gold" type="submit" disabled={placing}>{placing ? 'Placing order…' : `Place Order — ${formatPKR(total)}`}</button>
                 <button className="btn btn-ghost" type="button" onClick={() => setCheckout(false)}>Back to bag</button>
@@ -554,10 +560,10 @@ export default function Home() {
                   <p style={{ marginTop: 8 }}>
                     <strong style={{ fontSize: 22 }}>{formatPKR(quickView.price)}</strong>
                     {quickView.compareAt && (
-                      <span style={{ marginLeft: 10, color: '#6b6a7d' }}><s>{formatPKR(quickView.compareAt)}</s> <span className="sale-tag" style={{ marginLeft: 6 }}>-{discountPct(quickView)}%</span></span>
+                      <span style={{ marginLeft: 10, color: '#b9b7c9' }}><s>{formatPKR(quickView.compareAt)}</s> <span className="sale-tag" style={{ marginLeft: 6 }}>-{discountPct(quickView)}%</span></span>
                     )}
                   </p>
-                  <p style={{ color: '#6b6a7d', lineHeight: 1.6 }}>{quickView.description}</p>
+                  <p style={{ color: '#b9b7c9', lineHeight: 1.6 }}>{quickView.description}</p>
                   <div style={{ marginTop: 14 }}>
                     <label className="lbl">Size</label>
                     <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
@@ -606,9 +612,9 @@ export default function Home() {
             <div className="modal" style={{ maxWidth: 520, padding: 32, textAlign: 'center' }}>
               <span style={{ display: 'inline-flex', color: '#2e7d32', background: '#e8f5e9', borderRadius: '50%', padding: 14 }}><Icon d={ICONS.check} size={32} /></span>
               <h2 style={{ fontSize: 28, marginTop: 14 }}>Order placed — thank you!</h2>
-              <p style={{ color: '#6b6a7d', lineHeight: 1.6 }}>
-                Your order <strong style={{ color: '#100f2e' }}>{placedOrder.id}</strong> is confirmed.
-                Please keep <strong style={{ color: '#100f2e' }}>{formatPKR(placedOrder.total)}</strong> ready —
+              <p style={{ color: '#b9b7c9', lineHeight: 1.6 }}>
+                Your order <strong style={{ color: '#f2f35c' }}>{placedOrder.id}</strong> is confirmed.
+                Please keep <strong style={{ color: '#f2f35c' }}>{formatPKR(placedOrder.total)}</strong> ready —
                 you will pay in cash when it arrives.
               </p>
               <div className="stitch" style={{ borderRadius: 12, padding: 16, textAlign: 'left', marginTop: 16, fontSize: 14, lineHeight: 1.9 }}>
@@ -621,7 +627,7 @@ export default function Home() {
                 <div><strong>Delivery:</strong> {placedOrder.delivery === 0 ? 'FREE' : formatPKR(placedOrder.delivery)}</div>
                 <div><strong>Total (COD):</strong> {formatPKR(placedOrder.total)}</div>
               </div>
-              <p style={{ fontSize: 13, color: '#6b6a7d', marginTop: 14 }}>
+              <p style={{ fontSize: 13, color: '#b9b7c9', marginTop: 14 }}>
                 Questions? Call {settings?.phone || '0321-0066789'} (10 AM–8 PM, Mon–Sat).
               </p>
               <button className="btn btn-navy" style={{ marginTop: 8 }} onClick={() => setPlacedOrder(null)}>Continue Shopping</button>
@@ -657,13 +663,13 @@ function ProductCard({
         {product.badge && <span className="gold-label" style={{ position: 'absolute', top: 12, right: 12 }}>{product.badge}</span>}
       </div>
       <div style={{ padding: 16 }}>
-        <div style={{ fontSize: 12, color: '#6b6a7d', fontWeight: 700, letterSpacing: '.05em', textTransform: 'uppercase' }}>{product.category}</div>
+        <div style={{ fontSize: 12, color: '#b9b7c9', fontWeight: 700, letterSpacing: '.05em', textTransform: 'uppercase' }}>{product.category}</div>
         <h3 style={{ fontSize: 18, marginTop: 4, cursor: 'pointer' }} onClick={() => onQuickView(product)}>{product.name}</h3>
         <p style={{ margin: '8px 0 0' }}>
           <strong style={{ fontSize: 18 }}>{formatPKR(product.price)}</strong>
-          {product.compareAt && <span style={{ marginLeft: 8, color: '#6b6a7d', fontSize: 14 }}><s>{formatPKR(product.compareAt)}</s></span>}
+          {product.compareAt && <span style={{ marginLeft: 8, color: '#b9b7c9', fontSize: 14 }}><s>{formatPKR(product.compareAt)}</s></span>}
         </p>
-        <p style={{ fontSize: 13, color: '#6b6a7d', margin: '6px 0 0' }}>
+        <p style={{ fontSize: 13, color: '#b9b7c9', margin: '6px 0 0' }}>
           Sizes: {product.sizes.join(', ')} · {product.stock > 0 ? `${product.stock} in stock` : 'Out of stock'}
         </p>
         <div style={{ display: 'flex', gap: 8, marginTop: 14 }}>
@@ -672,7 +678,7 @@ function ProductCard({
           </button>
           <button
             className="btn btn-ghost"
-            style={{ padding: '10px 12px', color: wished ? '#c03128' : '#100f2e', borderColor: wished ? '#c03128' : '#100f2e' }}
+            style={{ padding: '10px 12px', color: wished ? '#c03128' : '#100f2e', borderColor: wished ? '#c03128' : '#f2f35c' }}
             onClick={() => onToggleWish(product.id)}
             aria-label={wished ? 'Remove from wishlist' : 'Add to wishlist'}
           >

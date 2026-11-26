@@ -6,7 +6,7 @@ const fraunces = Fraunces({ subsets: ['latin'], variable: '--font-heading', weig
 const publicSans = Public_Sans({ subsets: ['latin'], variable: '--font-body', weight: ['400', '500', '600', '700', '800'] });
 
 export const metadata: Metadata = {
-  title: "Ibrahim's Family Collection — Family Clothing, Faisalabad",
+  title: "Ibrahim's Family Collection — Family Clothing, Faisalabad · Design V4 · Stitched Dark",
   description:
     "Ibrahim's Family Collection — clothing for Men, Women, Kids and Abaya in Faisalabad since 2015. Cash on Delivery across Pakistan.",
 };
