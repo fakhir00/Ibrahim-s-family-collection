@@ -47,11 +47,11 @@ function ProductImage({ product, height = 260 }: { product: Product; height?: nu
       <div
         style={{
           height,
-          background: '#100f2e',
+          background: '#0f3d2e',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
-          color: '#f2f35c',
+          color: '#f5d76e',
           fontFamily: 'Fraunces, Georgia, serif',
           fontSize: 44,
           fontWeight: 700,
@@ -243,15 +243,15 @@ export default function Home() {
   return (
     <div>
       {/* Announcement bar */}
-      <div style={{ background: '#100f2e', color: '#f2f35c', textAlign: 'center', padding: '8px 12px', fontSize: 13, fontWeight: 700, letterSpacing: '.04em', borderBottom: '2px dashed #c9a227' }}>
-        Winter Sale is on — up to {maxDiscount}% off selected styles &nbsp;·&nbsp; Cash on Delivery across Pakistan
+      <div style={{ background: '#0f3d2e', color: '#f5d76e', textAlign: 'center', padding: '8px 12px', fontSize: 13, fontWeight: 700, letterSpacing: '.04em', borderBottom: '2px solid #c9a227' }}>
+        Design V1 · Deep Green & Gold — Winter Sale is on — up to {maxDiscount}% off selected styles &nbsp;·&nbsp; Cash on Delivery across Pakistan
       </div>
 
       {/* Header */}
       <header style={{ background: '#fff', borderBottom: '1px solid #e8e6df', position: 'sticky', top: 0, zIndex: 50 }}>
         <div style={{ maxWidth: 1180, margin: '0 auto', padding: '12px 16px', display: 'flex', alignItems: 'center', gap: 16, flexWrap: 'wrap' }}>
           <Link href="/" style={{ display: 'flex', alignItems: 'center', gap: 12, textDecoration: 'none' }}>
-            <span style={{ background: '#100f2e', borderRadius: 10, padding: 5, display: 'inline-flex', border: '1px dashed #c9a227', outline: '1px solid #efe9d6', outlineOffset: 2 }}>
+            <span style={{ background: '#100f2e', borderRadius: 10, padding: 5, display: 'inline-flex', border: '1px solid #c9a227', outline: '1px solid #efe9d6', outlineOffset: 2 }}>
               <img src={LOGO_DATA_URI} alt="Ibrahim's Family Collection logo" width={46} height={46} style={{ borderRadius: 6 }} />
             </span>
             <span>
@@ -263,7 +263,7 @@ export default function Home() {
           </Link>
 
           <div style={{ flex: 1, minWidth: 200, display: 'flex', alignItems: 'center', border: '1.5px solid #e8e6df', borderRadius: 999, padding: '8px 14px', gap: 8 }}>
-            <span style={{ color: '#100f2e', display: 'inline-flex' }}><Icon d={ICONS.search} size={18} /></span>
+            <span style={{ color: '#0f3d2e', display: 'inline-flex' }}><Icon d={ICONS.search} size={18} /></span>
             <input
               aria-label="Search products"
               value={search}
@@ -284,7 +284,7 @@ export default function Home() {
           <button className="btn btn-navy" style={{ padding: '9px 16px' }} onClick={() => setDrawerOpen(true)} aria-label="Open shopping bag">
             <Icon d={ICONS.bag} size={18} /> Bag ({cartCount})
           </button>
-          <Link href="/admin" style={{ fontSize: 14, fontWeight: 700, color: '#100f2e' }}>Admin</Link>
+          <Link href="/admin" style={{ fontSize: 14, fontWeight: 700, color: '#0f3d2e' }}>Admin</Link>
         </div>
         <nav style={{ maxWidth: 1180, margin: '0 auto', padding: '0 16px 10px', display: 'flex', gap: 8, flexWrap: 'wrap' }}>
           <button className={`chip ${category === 'All' ? 'active' : ''}`} onClick={() => setCategory('All')}>All</button>
@@ -297,9 +297,9 @@ export default function Home() {
       {/* Hero */}
       <section className="hero-grid" style={{ maxWidth: 1180, margin: '0 auto', padding: '40px 16px 28px' }}>
         <div>
-          <span className="gold-label">Winter Collection · Faisalabad</span>
+          <span className="gold-label">Winter Collection · Faisalabad · Design V1 Green & Gold</span>
           <h1 className="hero-title" style={{ fontSize: 56, lineHeight: 1.05, marginTop: 14 }}>
-            Cozy. Simple. <span style={{ borderBottom: '4px dashed #c9a227' }}>Winter.</span>
+            Cozy. Simple. <span style={{ borderBottom: '4px solid #c9a227' }}>Winter.</span>
           </h1>
           <p style={{ fontSize: 18, color: '#6b6a7d', lineHeight: 1.6, maxWidth: 520 }}>
             Warm, honest family clothing for Men, Women, Kids and Abaya — stitched with
@@ -314,7 +314,7 @@ export default function Home() {
           </p>
         </div>
         <div style={{ position: 'relative' }}>
-          <div className="stitch-frame">
+          <div className="">
             <img src="https://images.unsplash.com/photo-1445205170230-053b83016050?w=1000&q=80&auto=format&fit=crop" alt="Winter clothing rail" style={{ width: '100%', height: 340, objectFit: 'cover', borderRadius: 10 }} />
           </div>
           <span className="sale-tag" style={{ position: 'absolute', top: 18, right: 18, fontSize: 16, padding: '8px 14px' }}>
@@ -325,7 +325,7 @@ export default function Home() {
       </section>
 
       {/* Ticker */}
-      <div style={{ background: '#f2f35c', borderTop: '2px dashed #c9a227', borderBottom: '2px dashed #c9a227', overflow: 'hidden', padding: '9px 0', fontWeight: 700, color: '#100f2e', fontSize: 14 }}>
+      <div style={{ background: '#f5d76e', borderTop: '2px solid #c9a227', borderBottom: '2px solid #c9a227', overflow: 'hidden', padding: '9px 0', fontWeight: 700, color: '#0f3d2e', fontSize: 14 }}>
         <div className="ticker-track">
           {[...TICKER_ITEMS, ...TICKER_ITEMS].map((t, i) => (
             <span key={i}>{t} ·</span>
@@ -341,9 +341,9 @@ export default function Home() {
           { icon: ICONS.refresh, title: 'Easy Exchange', text: '7-day exchange in store' },
           { icon: ICONS.shield, title: 'Quality Checked', text: 'Every piece checked before packing' },
         ].map((p) => (
-          <div key={p.title} className="stitch" style={{ borderRadius: 12, padding: 16, background: '#fff', display: 'flex', gap: 12, alignItems: 'flex-start' }}>
+          <div key={p.title} className="" style={{ borderRadius: 12, padding: 16, background: '#fff', display: 'flex', gap: 12, alignItems: 'flex-start' }}>
             <span style={{ color: '#c9a227', display: 'inline-flex' }}><Icon d={p.icon} size={24} /></span>
-            <span><strong style={{ display: 'block', color: '#100f2e' }}>{p.title}</strong><span style={{ fontSize: 13, color: '#6b6a7d' }}>{p.text}</span></span>
+            <span><strong style={{ display: 'block', color: '#0f3d2e' }}>{p.title}</strong><span style={{ fontSize: 13, color: '#6b6a7d' }}>{p.text}</span></span>
           </div>
         ))}
       </section>
@@ -359,7 +359,7 @@ export default function Home() {
               onClick={() => { setCategory(c); setShowWishlistOnly(false); document.getElementById('shop')?.scrollIntoView({ behavior: 'smooth' }); }}
               style={{ textAlign: 'left', padding: 0, background: 'none', border: 'none' }}
             >
-              <div className="stitch-frame card" style={{ padding: 6 }}>
+              <div className="card" style={{ padding: 6 }}>
                 <img src={CATEGORY_IMAGES[c]} alt={c + ' clothing'} style={{ width: '100%', height: 190, objectFit: 'cover', borderRadius: 10 }} />
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '12px 8px 8px' }}>
                   <span className="serif" style={{ fontSize: 20, fontWeight: 700 }}>{c}</span>
@@ -426,11 +426,11 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer style={{ background: '#fff', borderTop: '2px dashed #c9a227' }}>
+      <footer style={{ background: '#fff', borderTop: '2px solid #c9a227' }}>
         <div style={{ maxWidth: 1180, margin: '0 auto', padding: '36px 16px', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: 28 }}>
           <div>
             <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-              <span style={{ background: '#100f2e', borderRadius: 10, padding: 5, display: 'inline-flex', border: '1px dashed #c9a227', outline: '1px solid #efe9d6', outlineOffset: 2 }}>
+              <span style={{ background: '#100f2e', borderRadius: 10, padding: 5, display: 'inline-flex', border: '1px solid #c9a227', outline: '1px solid #efe9d6', outlineOffset: 2 }}>
                 <img src={LOGO_DATA_URI} alt="Ibrahim's Family Collection logo" width={42} height={42} style={{ borderRadius: 6 }} />
               </span>
               <span className="serif" style={{ fontSize: 19, fontWeight: 700 }}>Ibrahim&rsquo;s Family Collection</span>
@@ -463,7 +463,7 @@ export default function Home() {
             </p>
           </div>
         </div>
-        <div style={{ borderTop: '1px dashed #c9a227', textAlign: 'center', padding: '14px 16px', fontSize: 13, color: '#6b6a7d' }}>
+        <div style={{ borderTop: '1px solid #c9a227', textAlign: 'center', padding: '14px 16px', fontSize: 13, color: '#6b6a7d' }}>
           © {new Date().getFullYear()} Ibrahim&rsquo;s Family Collection · ibrahimsfc.com · Stitched with care in Faisalabad
         </div>
       </footer>
@@ -482,7 +482,7 @@ export default function Home() {
                 <p style={{ color: '#6b6a7d' }}>Your bag is empty. Add something cosy from the collection.</p>
               ) : (
                 cart.map((line, i) => (
-                  <div key={i} style={{ display: 'flex', gap: 12, marginBottom: 16, borderBottom: '1px dashed #e8e6df', paddingBottom: 14 }}>
+                  <div key={i} style={{ display: 'flex', gap: 12, marginBottom: 16, borderBottom: '1px solid #e8e6df', paddingBottom: 14 }}>
                     <div style={{ width: 72, flexShrink: 0 }}><ProductImage product={line.product} height={84} /></div>
                     <div style={{ flex: 1 }}>
                       <strong style={{ fontSize: 14 }}>{line.product.name}</strong>
@@ -509,7 +509,7 @@ export default function Home() {
                   {subtotal < FREE_DELIVERY_THRESHOLD && (
                     <div style={{ fontSize: 13, color: '#6b6a7d' }}>Add {formatPKR(FREE_DELIVERY_THRESHOLD - subtotal)} more for free delivery.</div>
                   )}
-                  <div style={{ display: 'flex', justifyContent: 'space-between', borderTop: '2px dashed #c9a227', marginTop: 8, paddingTop: 8 }}>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', borderTop: '2px solid #c9a227', marginTop: 8, paddingTop: 8 }}>
                     <span>Total</span><strong style={{ fontSize: 18 }}>{formatPKR(total)}</strong>
                   </div>
                 </div>
@@ -607,11 +607,11 @@ export default function Home() {
               <span style={{ display: 'inline-flex', color: '#2e7d32', background: '#e8f5e9', borderRadius: '50%', padding: 14 }}><Icon d={ICONS.check} size={32} /></span>
               <h2 style={{ fontSize: 28, marginTop: 14 }}>Order placed — thank you!</h2>
               <p style={{ color: '#6b6a7d', lineHeight: 1.6 }}>
-                Your order <strong style={{ color: '#100f2e' }}>{placedOrder.id}</strong> is confirmed.
-                Please keep <strong style={{ color: '#100f2e' }}>{formatPKR(placedOrder.total)}</strong> ready —
+                Your order <strong style={{ color: '#0f3d2e' }}>{placedOrder.id}</strong> is confirmed.
+                Please keep <strong style={{ color: '#0f3d2e' }}>{formatPKR(placedOrder.total)}</strong> ready —
                 you will pay in cash when it arrives.
               </p>
-              <div className="stitch" style={{ borderRadius: 12, padding: 16, textAlign: 'left', marginTop: 16, fontSize: 14, lineHeight: 1.9 }}>
+              <div className="" style={{ borderRadius: 12, padding: 16, textAlign: 'left', marginTop: 16, fontSize: 14, lineHeight: 1.9 }}>
                 <div><strong>Order:</strong> {placedOrder.id}</div>
                 <div><strong>Name:</strong> {placedOrder.customer}</div>
                 <div><strong>Phone:</strong> {placedOrder.phone}</div>
@@ -650,7 +650,7 @@ function ProductCard({
   return (
     <article className="card">
       <div style={{ position: 'relative', cursor: 'pointer' }} onClick={() => onQuickView(product)}>
-        <div className="stitch-frame" style={{ border: 'none', padding: 0, borderRadius: 0 }}>
+        <div className="" style={{ border: 'none', padding: 0, borderRadius: 0 }}>
           <ProductImage product={product} height={260} />
         </div>
         {pct > 0 && <span className="sale-tag" style={{ position: 'absolute', top: 12, left: 12 }}>-{pct}%</span>}
@@ -672,7 +672,7 @@ function ProductCard({
           </button>
           <button
             className="btn btn-ghost"
-            style={{ padding: '10px 12px', color: wished ? '#c03128' : '#100f2e', borderColor: wished ? '#c03128' : '#100f2e' }}
+            style={{ padding: '10px 12px', color: wished ? '#c03128' : '#0f3d2e', borderColor: wished ? '#c03128' : '#0f3d2e' }}
             onClick={() => onToggleWish(product.id)}
             aria-label={wished ? 'Remove from wishlist' : 'Add to wishlist'}
           >
