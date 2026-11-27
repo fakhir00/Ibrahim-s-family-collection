@@ -2,7 +2,7 @@
 
 import { useEffect, useMemo, useState } from 'react';
 import Link from 'next/link';
-import { LOGO_DATA_URI } from '@/lib/logo-data';
+import { LOGO_WIDE_DATA_URI } from '@/lib/logo-data';
 import { formatPKR } from '@/lib/types';
 import type { Order, OrderStatus, Product, Settings } from '@/lib/types';
 
@@ -155,15 +155,15 @@ export default function AdminPage() {
   return (
     <div style={{ minHeight: '100vh', background: '#faf8f2' }}>
       <header style={{ background: '#100f2e', borderBottom: '3px solid #f2f35c' }}>
-        <div style={{ maxWidth: 1180, margin: '0 auto', padding: '14px 16px', display: 'flex', alignItems: 'center', gap: 12, flexWrap: 'wrap' }}>
-          <img src={LOGO_DATA_URI} alt="Ibrahim's Family Collection logo" width={72} height={72} className="admin-logo" style={{ objectFit: 'contain' }} />
+        <div style={{ maxWidth: 1180, margin: '0 auto', padding: '8px 16px', display: 'flex', alignItems: 'center', gap: 12, flexWrap: 'wrap' }}>
+          <img src={LOGO_WIDE_DATA_URI} alt="Ibrahim's Family Collection logo" width={125} height={48} className="admin-logo" style={{ objectFit: 'contain' }} />
           <div>
             <h1 style={{ fontSize: 22, color: '#fff' }}>Admin — {settings?.storeName || "Ibrahim's Family Collection"}</h1>
             <div style={{ fontSize: 13, color: '#cfcfe0' }}>Store owner panel · {settings?.phone || '0321-0066789'}</div>
           </div>
           <Link href="/" className="btn btn-ghost" style={{ marginLeft: 'auto', padding: '9px 16px' }}>View Store</Link>
         </div>
-        <nav style={{ maxWidth: 1180, margin: '0 auto', padding: '0 16px 12px', display: 'flex', gap: 8, flexWrap: 'wrap' }}>
+        <nav style={{ maxWidth: 1180, margin: '0 auto', padding: '0 16px 8px', display: 'flex', gap: 8, flexWrap: 'wrap' }}>
           {tabs.map((t) => (
             <button key={t.id} className={`chip ${tab === t.id ? 'active' : ''}`} onClick={() => setTab(t.id)}>
               {t.label}

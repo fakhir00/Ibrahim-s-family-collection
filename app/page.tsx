@@ -2,7 +2,7 @@
 
 import { useEffect, useMemo, useState } from 'react';
 import Link from 'next/link';
-import { LOGO_DATA_URI } from '@/lib/logo-data';
+import { LOGO_WIDE_DATA_URI } from '@/lib/logo-data';
 import { DELIVERY_FEE, FREE_DELIVERY_THRESHOLD, formatPKR } from '@/lib/types';
 import type { Order, Product, Settings } from '@/lib/types';
 
@@ -235,18 +235,18 @@ export default function Home() {
   return (
     <div>
       {/* Announcement bar */}
-      <div style={{ background: '#f2f35c', color: '#100f2e', textAlign: 'center', padding: '9px 12px', fontSize: 13, fontWeight: 700, letterSpacing: '.04em' }}>
+      <div style={{ background: '#f2f35c', color: '#100f2e', textAlign: 'center', padding: '6px 12px', fontSize: 12, fontWeight: 700, letterSpacing: '.04em' }}>
         Winter Sale is on — up to {maxDiscount || 33}% off selected styles &nbsp;·&nbsp; Cash on Delivery across Pakistan
       </div>
 
       {/* Header — navy, logo placed bare on the identical navy so it blends in */}
       <header style={{ background: '#100f2e', position: 'sticky', top: 0, zIndex: 50 }}>
-        <div style={{ maxWidth: 1180, margin: '0 auto', padding: '8px 16px', display: 'flex', alignItems: 'center', gap: 16, flexWrap: 'wrap' }}>
+        <div style={{ maxWidth: 1180, margin: '0 auto', padding: '8px 16px', display: 'flex', alignItems: 'center', gap: 12, flexWrap: 'wrap' }}>
           <Link href="/" aria-label="Ibrahim's Family Collection — home" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none' }}>
-            <img src={LOGO_DATA_URI} alt="Ibrahim's Family Collection logo" width={110} height={110} className="site-logo" style={{ objectFit: 'contain' }} />
+            <img src={LOGO_WIDE_DATA_URI} alt="Ibrahim's Family Collection logo" width={136} height={52} className="site-logo" style={{ objectFit: 'contain' }} />
           </Link>
 
-          <div style={{ flex: 1, minWidth: 200, display: 'flex', alignItems: 'center', background: '#fff', borderRadius: 999, padding: '8px 14px', gap: 8 }}>
+          <div style={{ flex: 1, minWidth: 200, display: 'flex', alignItems: 'center', background: '#fff', borderRadius: 999, padding: '7px 14px', gap: 8 }}>
             <span style={{ color: '#100f2e', display: 'inline-flex' }}><Icon d={ICONS.search} size={18} /></span>
             <input
               aria-label="Search products"
@@ -258,18 +258,18 @@ export default function Home() {
           </div>
 
           <button
-            style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '9px 14px', background: 'transparent', color: '#fff', border: '1.5px solid rgba(255,255,255,.6)', borderRadius: 10, fontWeight: 700, fontSize: 15 }}
+            style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '8px 12px', background: 'transparent', color: '#fff', border: '1.5px solid rgba(255,255,255,.6)', borderRadius: 10, fontWeight: 700, fontSize: 14 }}
             onClick={() => { setShowWishlistOnly((v) => !v); setCategory('All'); setPriceBand('All'); document.getElementById('shop')?.scrollIntoView({ behavior: 'smooth' }); }}
             aria-label="View wishlist"
           >
             <Icon d={ICONS.heart} size={18} /> Wishlist ({wishlist.length})
           </button>
-          <button className="btn btn-gold" style={{ padding: '9px 16px' }} onClick={() => setDrawerOpen(true)} aria-label="Open shopping bag">
+          <button className="btn btn-gold" style={{ padding: '8px 14px', fontSize: 14 }} onClick={() => setDrawerOpen(true)} aria-label="Open shopping bag">
             <Icon d={ICONS.bag} size={18} /> Bag ({cartCount})
           </button>
           <Link href="/admin" style={{ fontSize: 14, fontWeight: 700, color: '#f2f35c' }}>Admin</Link>
         </div>
-        <nav style={{ maxWidth: 1180, margin: '0 auto', padding: '0 16px 12px', display: 'flex', gap: 8, flexWrap: 'wrap' }}>
+        <nav style={{ maxWidth: 1180, margin: '0 auto', padding: '0 16px 8px', display: 'flex', gap: 8, flexWrap: 'wrap' }}>
           <button className={`chip ${category === 'All' ? 'active' : ''}`} onClick={() => setCategory('All')}>All</button>
           {categories.map((c) => (
             <button key={c} className={`chip ${category === c ? 'active' : ''}`} onClick={() => setCategory(c)}>{c}</button>
@@ -412,7 +412,7 @@ export default function Home() {
         <div style={{ maxWidth: 1180, margin: '0 auto', padding: '40px 16px', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: 28 }}>
           <div>
             <div style={{ display: 'flex', alignItems: 'center' }}>
-              <img src={LOGO_DATA_URI} alt="Ibrahim's Family Collection logo" width={90} height={90} className="footer-logo" style={{ objectFit: 'contain' }} />
+              <img src={LOGO_WIDE_DATA_URI} alt="Ibrahim's Family Collection logo" width={125} height={48} className="footer-logo" style={{ objectFit: 'contain' }} />
             </div>
             <p style={{ color: '#cfcfe0', lineHeight: 1.6, fontSize: 14 }}>
               Family clothing for Men, Women, Kids and Abaya — serving Faisalabad since 2015.
