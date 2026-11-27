@@ -241,15 +241,9 @@ export default function Home() {
 
       {/* Header — navy, logo placed bare on the identical navy so it blends in */}
       <header style={{ background: '#100f2e', position: 'sticky', top: 0, zIndex: 50 }}>
-        <div style={{ maxWidth: 1180, margin: '0 auto', padding: '14px 16px', display: 'flex', alignItems: 'center', gap: 16, flexWrap: 'wrap' }}>
-          <Link href="/" style={{ display: 'flex', alignItems: 'center', gap: 12, textDecoration: 'none' }}>
-            <img src={LOGO_DATA_URI} alt="Ibrahim's Family Collection logo" width={56} height={56} />
-            <span>
-              <span className="serif" style={{ display: 'block', fontSize: 20, fontWeight: 700, lineHeight: 1.1, color: '#fff' }}>
-                Ibrahim&rsquo;s Family Collection
-              </span>
-              <span style={{ display: 'block', fontSize: 12, color: '#cfcfe0' }}>Family clothing · Faisalabad · Since 2015</span>
-            </span>
+        <div style={{ maxWidth: 1180, margin: '0 auto', padding: '8px 16px', display: 'flex', alignItems: 'center', gap: 16, flexWrap: 'wrap' }}>
+          <Link href="/" aria-label="Ibrahim's Family Collection — home" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none' }}>
+            <img src={LOGO_DATA_URI} alt="Ibrahim's Family Collection logo" width={110} height={110} className="site-logo" style={{ objectFit: 'contain' }} />
           </Link>
 
           <div style={{ flex: 1, minWidth: 200, display: 'flex', alignItems: 'center', background: '#fff', borderRadius: 999, padding: '8px 14px', gap: 8 }}>
@@ -283,35 +277,43 @@ export default function Home() {
         </nav>
       </header>
 
-      {/* Hero — large, clear photo; no frosted panel, no scrim over the image */}
-      <section style={{ background: '#f4efe6' }}>
-        <div className="hero-grid" style={{ maxWidth: 1180, margin: '0 auto', padding: '48px 16px' }}>
-          <div>
+      {/* Hero — full-bleed background photo, white card on the left (as in the good artifact hero) */}
+      <section className="hero-full">
+        <img
+          src="https://images.unsplash.com/photo-1585487000160-6ebcfceb0d03?w=2000&q=85&auto=format&fit=crop"
+          alt="Woman in a winter dress — Ibrahim's Family Collection"
+          className="hero-full-bg"
+        />
+        <span style={{ position: 'absolute', top: 28, right: 28, zIndex: 2, transform: 'rotate(6deg)', background: '#c03128', color: '#fff', padding: '10px 18px', borderRadius: 6, fontWeight: 800, fontSize: 15, lineHeight: 1.25, textAlign: 'center', boxShadow: '0 8px 20px rgba(16,15,46,.30)' }}>
+          WINTER SALE<br />Up to {maxDiscount || 33}% OFF
+        </span>
+        <div style={{ position: 'relative', zIndex: 1, maxWidth: 1180, margin: '0 auto', padding: '64px 16px', minHeight: 620, display: 'flex', alignItems: 'center' }}>
+          <div className="hero-card">
             <span className="gold-label">Winter Collection · Faisalabad</span>
-            <h1 className="hero-title" style={{ fontSize: 58, lineHeight: 1.05, marginTop: 16 }}>
-              Cozy. Simple. <span style={{ borderBottom: '4px solid #c9a227' }}>Winter.</span>
+            <h1 className="hero-title" style={{ fontSize: 56, lineHeight: 1.05, marginTop: 16 }}>
+              Cozy. Simple. <span style={{ borderBottom: '4px dashed #c9a227' }}>Winter.</span>
             </h1>
-            <p style={{ fontSize: 18, color: '#4a4860', lineHeight: 1.6, maxWidth: 520 }}>
-              Warm, honest family clothing for Men, Women, Kids and Abaya — stitched with
-              care, priced for the whole family. Shop online, pay cash on delivery.
+            <p style={{ fontSize: 18, color: '#4a4860', lineHeight: 1.6, marginTop: 14 }}>
+              Quality clothing for the whole family — women, men and kids — at prices that
+              respect your budget. Serving families since 2015.
             </p>
             <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap', marginTop: 22 }}>
-              <a className="btn btn-navy" href="#shop">Shop the Collection</a>
-              <a className="btn btn-gold" href="#under999">Best Buys Under PKR 999</a>
+              <a className="btn btn-gold" href="#shop">SHOP NOW</a>
+              <a className="btn btn-ghost" href="#under1999" style={{ border: '1.5px dashed #100f2e' }}>STYLE STEALS UNDER 1,999</a>
             </div>
             <p style={{ fontSize: 13, color: '#6b6a7d', marginTop: 16 }}>
               Free delivery on orders over PKR 5,000 · Delivery PKR 250 otherwise · Easy 7-day exchange in store
             </p>
           </div>
-          <div style={{ position: 'relative' }}>
-            <img src="https://images.unsplash.com/photo-1445205170230-053b83016050?w=1200&q=85&auto=format&fit=crop" alt="Winter clothing rail" style={{ width: '100%', height: 440, objectFit: 'cover', borderRadius: 16, boxShadow: '0 16px 40px rgba(16,15,46,.18)' }} />
-            <span className="sale-tag" style={{ position: 'absolute', top: 18, right: 18, fontSize: 16, padding: '8px 14px' }}>
-              Winter Sale — up to {maxDiscount || 33}% off
-            </span>
-            <span style={{ position: 'absolute', bottom: 18, left: 18, background: '#100f2e', color: '#f2f35c', padding: '7px 14px', borderRadius: 999, fontSize: 12, fontWeight: 700, letterSpacing: '.06em', textTransform: 'uppercase' }}>Since 2015 · ABC Road, Faisalabad</span>
-          </div>
         </div>
       </section>
+
+      {/* Yellow scrolling ticker */}
+      <div style={{ background: '#f2f35c', color: '#100f2e', overflow: 'hidden', padding: '10px 0', fontWeight: 700, fontSize: 14, letterSpacing: '.04em' }}>
+        <span className="ticker-track">
+          {'STYLE STEALS UNDER PKR 1,999 \u00b7 EASY SIZE EXCHANGE AT OUR FAISALABAD STORE \u00b7 NEW WINTER ARRIVALS \u2014 KHADDAR & FLEECE \u00b7 FREE DELIVERY OVER PKR 5,000 \u00b7 '.repeat(2)}
+        </span>
+      </div>
 
       {/* Perks */}
       <section style={{ maxWidth: 1180, margin: '0 auto', padding: '22px 16px', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: 14 }}>
@@ -365,7 +367,7 @@ export default function Home() {
       </section>
 
       {/* Under 1999 */}
-      <section style={{ maxWidth: 1180, margin: '0 auto', padding: '30px 16px' }}>
+      <section id="under1999" style={{ maxWidth: 1180, margin: '0 auto', padding: '30px 16px' }}>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', gap: 12, flexWrap: 'wrap' }}>
           <h2 style={{ fontSize: 30 }}>Style Steals Under PKR 1,999</h2>
           <span className="gold-label">Everyday favourites</span>
@@ -409,9 +411,8 @@ export default function Home() {
       <footer style={{ background: '#100f2e', color: '#fff' }}>
         <div style={{ maxWidth: 1180, margin: '0 auto', padding: '40px 16px', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: 28 }}>
           <div>
-            <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
-              <img src={LOGO_DATA_URI} alt="Ibrahim's Family Collection logo" width={52} height={52} />
-              <span className="serif" style={{ fontSize: 19, fontWeight: 700, color: '#fff' }}>Ibrahim&rsquo;s Family Collection</span>
+            <div style={{ display: 'flex', alignItems: 'center' }}>
+              <img src={LOGO_DATA_URI} alt="Ibrahim's Family Collection logo" width={90} height={90} className="footer-logo" style={{ objectFit: 'contain' }} />
             </div>
             <p style={{ color: '#cfcfe0', lineHeight: 1.6, fontSize: 14 }}>
               Family clothing for Men, Women, Kids and Abaya — serving Faisalabad since 2015.

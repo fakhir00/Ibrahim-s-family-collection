@@ -156,7 +156,7 @@ export default function AdminPage() {
     <div style={{ minHeight: '100vh', background: '#faf8f2' }}>
       <header style={{ background: '#100f2e', borderBottom: '3px solid #f2f35c' }}>
         <div style={{ maxWidth: 1180, margin: '0 auto', padding: '14px 16px', display: 'flex', alignItems: 'center', gap: 12, flexWrap: 'wrap' }}>
-          <img src={LOGO_DATA_URI} alt="Ibrahim's Family Collection logo" width={52} height={52} />
+          <img src={LOGO_DATA_URI} alt="Ibrahim's Family Collection logo" width={72} height={72} className="admin-logo" style={{ objectFit: 'contain' }} />
           <div>
             <h1 style={{ fontSize: 22, color: '#fff' }}>Admin — {settings?.storeName || "Ibrahim's Family Collection"}</h1>
             <div style={{ fontSize: 13, color: '#cfcfe0' }}>Store owner panel · {settings?.phone || '0321-0066789'}</div>
