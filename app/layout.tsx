@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Fraunces, Public_Sans } from 'next/font/google';
 import './globals.css';
+import { ShopProvider } from '@/lib/site';
 
 const fraunces = Fraunces({ subsets: ['latin'], variable: '--font-heading', weight: ['500', '600', '700'] });
 const publicSans = Public_Sans({ subsets: ['latin'], variable: '--font-body', weight: ['400', '500', '600', '700', '800'] });
@@ -14,7 +15,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${fraunces.variable} ${publicSans.variable}`}>
-      <body>{children}</body>
+      <body><ShopProvider>{children}</ShopProvider></body>
     </html>
   );
 }

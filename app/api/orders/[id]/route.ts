@@ -4,6 +4,15 @@ import type { OrderStatus } from '@/lib/types';
 
 const VALID: OrderStatus[] = ['Pending', 'Confirmed', 'Shipped', 'Delivered', 'Cancelled'];
 
+export async function GET(_req: Request, { params }: { params: { id: string } }) {
+  const store = getStore();
+  const order = store.orders.find((o) => o.id === params.id);
+  if (!order) {
+    return NextResponse.json({ error: 'Order not found' }, { status: 404 });
+  }
+  return NextResponse.json(order);
+}
+
 export async function PATCH(req: Request, { params }: { params: { id: string } }) {
   try {
     const body = (await req.json()) as { status?: string };

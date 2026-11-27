@@ -1,10 +1,12 @@
 import type { Product, Settings } from './types';
 
 /**
- * STARTER / SAMPLE CATALOG — 14 products to get the store going.
+ * STARTER / SAMPLE CATALOG — 24 products.
  * Only ONE product is real (p01, Men's Fleece Cargo Trousers, supplied by the
- * owner). The other 13 are plausible sample listings — edit, replace or delete
+ * owner). The other 23 are plausible sample listings — edit, replace or delete
  * them from the Admin panel (Products tab) or by editing this file.
+ * Sample products: p02–p24 (p15–p24 added 2026-11-27 to make the store a
+ * full multi-page shop: 3 Women, 3 Men, 2 Kids, 2 Abaya).
  */
 export const STARTER_PRODUCTS: Product[] = [
   {
@@ -193,6 +195,147 @@ export const STARTER_PRODUCTS: Product[] = [
     badge: 'Under 999',
     description:
       'A classic pashmina shawl — warm, soft and generously sized. A winter essential at a family-friendly price.',
+  },
+  // --- 10 more SAMPLE listings (p15–p24), added 2026-11-27 ---
+  {
+    id: 'p15',
+    name: "Women's Khaddar Suit — 2 Piece",
+    price: 1499,
+    compareAt: 1899,
+    category: 'Women',
+    sizes: ['S', 'M', 'L', 'XL'],
+    colours: ['Teal', 'Maroon', 'Mustard'],
+    stock: 16,
+    image: 'https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=800&q=80&auto=format&fit=crop',
+    badge: 'New',
+    description:
+      'Warm khaddar two-piece for winter days — shirt and trouser in a soft, cosy weave. Sample listing.',
+  },
+  {
+    id: 'p16',
+    name: "Women's Winter Cardigan — Long",
+    price: 1799,
+    compareAt: 2299,
+    category: 'Women',
+    sizes: ['S', 'M', 'L'],
+    colours: ['Ivory', 'Gray', 'Pink'],
+    stock: 14,
+    image: 'https://images.unsplash.com/photo-1556905055-8f358a7a47b2?w=800&q=80&auto=format&fit=crop',
+    badge: 'New',
+    description:
+      'A long, soft knit cardigan that layers over anything. Warm, comfortable and easy to wear. Sample listing.',
+  },
+  {
+    id: 'p17',
+    name: "Women's Embroidered Dupatta — Chiffon",
+    price: 899,
+    compareAt: 1199,
+    category: 'Women',
+    sizes: ['One Size'],
+    colours: ['Maroon', 'Teal', 'Gold'],
+    stock: 30,
+    image: 'https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=800&q=80&auto=format&fit=crop',
+    badge: 'New',
+    description:
+      'A light chiffon dupatta with fine embroidery along the border. Dresses up any suit in seconds. Sample listing.',
+  },
+  {
+    id: 'p18',
+    name: "Men's Winter Jacket — Padded",
+    price: 3499,
+    compareAt: 4499,
+    category: 'Men',
+    sizes: ['M', 'L', 'XL'],
+    colours: ['Navy', 'Black', 'Olive'],
+    stock: 10,
+    image: 'https://images.unsplash.com/photo-1578932750294-f5075e85f44a?w=800&q=80&auto=format&fit=crop',
+    badge: 'New',
+    description:
+      'A padded winter jacket that blocks the cold without weighing you down. Warm lining, zip pockets. Sample listing.',
+  },
+  {
+    id: 'p19',
+    name: "Men's Casual T-Shirt — Pack of 2",
+    price: 899,
+    compareAt: 1199,
+    category: 'Men',
+    sizes: ['S', 'M', 'L', 'XL'],
+    colours: ['White', 'Black', 'Navy'],
+    stock: 40,
+    image: 'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=800&q=80&auto=format&fit=crop',
+    badge: 'New',
+    description:
+      'Two soft cotton t-shirts in everyday colours. Comfortable fit, holds its shape wash after wash. Sample listing.',
+  },
+  {
+    id: 'p20',
+    name: "Men's Polo Shirt — Cotton",
+    price: 999,
+    compareAt: 1399,
+    category: 'Men',
+    sizes: ['S', 'M', 'L', 'XL'],
+    colours: ['Navy', 'White', 'Green'],
+    stock: 25,
+    image: 'https://images.unsplash.com/photo-1523381210434-271e8be1f52b?w=800&q=80&auto=format&fit=crop',
+    badge: 'New',
+    description:
+      'A smart cotton polo with a neat collar — dressy enough for outings, comfortable enough for every day. Sample listing.',
+  },
+  {
+    id: 'p21',
+    name: 'Kids T-Shirt — Pack of 2',
+    price: 799,
+    compareAt: 999,
+    category: 'Kids',
+    sizes: ['2-3Y', '4-5Y', '6-7Y', '8-9Y'],
+    colours: ['Navy', 'Red', 'Yellow'],
+    stock: 35,
+    image: 'https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?w=800&q=80&auto=format&fit=crop',
+    badge: 'New',
+    description:
+      'Two soft cotton t-shirts for everyday play. Tough seams, bright colours, easy to wash. Sample listing.',
+  },
+  {
+    id: 'p22',
+    name: 'Kids Party Dress — Floral',
+    price: 1499,
+    compareAt: 1999,
+    category: 'Kids',
+    sizes: ['2-3Y', '4-5Y', '6-7Y'],
+    colours: ['Pink', 'Yellow', 'Floral'],
+    stock: 12,
+    image: 'https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?w=800&q=80&auto=format&fit=crop',
+    badge: 'New',
+    description:
+      'A cheerful floral party dress for birthdays and family gatherings. Soft lining, twirl-friendly skirt. Sample listing.',
+  },
+  {
+    id: 'p23',
+    name: 'Abaya — Chiffon with Lace Trim',
+    price: 5499,
+    compareAt: 6999,
+    category: 'Abaya',
+    sizes: ['S', 'M', 'L', 'XL'],
+    colours: ['Black', 'Navy'],
+    stock: 9,
+    image: 'https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?w=800&q=80&auto=format&fit=crop',
+    badge: 'New',
+    description:
+      'A flowing chiffon abaya with delicate lace along the sleeves and hem. Light, elegant and modest. Sample listing.',
+  },
+  {
+    id: 'p24',
+    name: 'Abaya — Nidha, Everyday',
+    price: 3999,
+    compareAt: 4999,
+    category: 'Abaya',
+    sizes: ['S', 'M', 'L', 'XL'],
+    colours: ['Black'],
+    stock: 15,
+    image: 'https://images.unsplash.com/photo-1487222477894-8943e31ef7b2?w=800&q=80&auto=format&fit=crop',
+    badge: 'New',
+    description:
+      'An everyday nidha abaya — soft, breathable and easy to wear all day, at home or out. Sample listing.',
   },
 ];
 

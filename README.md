@@ -26,9 +26,18 @@ npm start       # serve the production build
 
 ## What's inside
 
-- `app/page.tsx` — single-page storefront: hero, ticker, categories, Under PKR 999 / Under PKR 1,999 sections, filters, quick view, wishlist, bag drawer, COD checkout, order confirmation.
+- `app/page.tsx` — homepage: full-bleed hero, ticker, categories, New Winter Arrivals, Best Buys Under PKR 999 (includes PKR 999 exactly), Style Steals Under PKR 1,999, shop-all call to action.
+- `app/shop/page.tsx` — full catalog with search, category + price filters and sorting.
+- `app/category/[slug]/page.tsx` — Women / Men / Kids / Abaya category pages.
+- `app/product/[id]/page.tsx` — product detail: large photo, sizes, colours, stock, quantity, related products.
+- `app/about/page.tsx` — brand story (serving Faisalabad since 2015; only real facts).
+- `app/contact/page.tsx` — store address, phone, email, hours, Facebook, plus a front-end-only contact form.
+- `app/wishlist/page.tsx` — saved items (localStorage `ifc_wishlist`).
+- `app/checkout/page.tsx` — dedicated COD checkout page (order summary + delivery form → POST /api/orders).
+- `app/track/page.tsx` — track an order by ID (GET /api/orders/[id], plus the browser's `ifc_orders` mirror as fallback).
+- `lib/site.tsx` — shared storefront shell: ShopProvider (cart in localStorage `ifc_cart`, wishlist), slim navy header, bag drawer, extensive footer, product cards.
 - `app/admin/page.tsx` — admin: sales dashboard, products (add/edit/delete), orders (status Pending → Confirmed → Shipped → Delivered / Cancelled), customers, settings.
-- `lib/products.ts` — the 14-product starter catalog. **Only one product is real** (Men's Fleece Cargo Trousers, PKR 2,199, was PKR 2,799); the other 13 are clearly labelled sample listings — edit or replace them in Admin or in this file.
+- `lib/products.ts` — the 24-product catalog. **Only one product is real** (Men's Fleece Cargo Trousers, PKR 2,199, was PKR 2,799); the other 23 are clearly labelled sample listings — edit or replace them in Admin or in this file.
 - `lib/logo-data.ts` — the brand logo as a base64 data URI (UTF-8 text). The logo PNG itself is **not** in this repo: the git snapshot push used for deployment accepts text files only, so the binary logo is embedded as text instead. `public/logo.png` is git-ignored as a reminder.
 - `lib/store.ts` — server-side JSON store.
 
@@ -39,7 +48,7 @@ npm start       # serve the production build
 | `/api/products` | GET / POST | List / add products |
 | `/api/products/[id]` | PUT / DELETE | Edit / delete a product |
 | `/api/orders` | GET / POST | List orders / place an order (id like `IFC-XXXXXX`, decrements stock) |
-| `/api/orders/[id]` | PATCH | Change order status |
+| `/api/orders/[id]` | GET / PATCH | Look up one order / change order status |
 | `/api/settings` | GET / PUT | Store settings |
 
 Delivery is PKR 250, **free on orders over PKR 5,000**.
