@@ -154,14 +154,12 @@ export default function AdminPage() {
 
   return (
     <div style={{ minHeight: '100vh', background: '#faf8f2' }}>
-      <header style={{ background: '#fff', borderBottom: '2px dashed #c9a227' }}>
+      <header style={{ background: '#100f2e', borderBottom: '3px solid #f2f35c' }}>
         <div style={{ maxWidth: 1180, margin: '0 auto', padding: '14px 16px', display: 'flex', alignItems: 'center', gap: 12, flexWrap: 'wrap' }}>
-          <span style={{ background: '#100f2e', borderRadius: 10, padding: 5, display: 'inline-flex', border: '1px dashed #c9a227', outline: '1px solid #efe9d6', outlineOffset: 2 }}>
-            <img src={LOGO_DATA_URI} alt="Ibrahim's Family Collection logo" width={42} height={42} style={{ borderRadius: 6 }} />
-          </span>
+          <img src={LOGO_DATA_URI} alt="Ibrahim's Family Collection logo" width={52} height={52} />
           <div>
-            <h1 style={{ fontSize: 22 }}>Admin — {settings?.storeName || "Ibrahim's Family Collection"}</h1>
-            <div style={{ fontSize: 13, color: '#6b6a7d' }}>Store owner panel · {settings?.phone || '0321-0066789'}</div>
+            <h1 style={{ fontSize: 22, color: '#fff' }}>Admin — {settings?.storeName || "Ibrahim's Family Collection"}</h1>
+            <div style={{ fontSize: 13, color: '#cfcfe0' }}>Store owner panel · {settings?.phone || '0321-0066789'}</div>
           </div>
           <Link href="/" className="btn btn-ghost" style={{ marginLeft: 'auto', padding: '9px 16px' }}>View Store</Link>
         </div>
@@ -176,7 +174,7 @@ export default function AdminPage() {
       </header>
 
       <main style={{ maxWidth: 1180, margin: '0 auto', padding: '24px 16px 48px' }}>
-        <p style={{ fontSize: 13, color: '#6b6a7d', background: '#fff', border: '1px dashed #c9a227', borderRadius: 10, padding: '10px 14px' }}>
+        <p style={{ fontSize: 13, color: '#6b6a7d', background: '#fff', border: '1px solid #e8e6df', borderRadius: 10, padding: '10px 14px' }}>
           Note: this store has no external database yet. Orders and product edits are kept in the
           server&rsquo;s memory (and mirrored in this browser), so they survive within a warm
           instance but can be lost if the server restarts. See README.md for the upgrade path
@@ -351,7 +349,7 @@ export default function AdminPage() {
               </p>
               <div>
                 <button className="btn btn-navy" type="submit">Save Settings</button>
-                {savedNote && <span style={{ marginLeft: 12, color: '#2e7d32', fontWeight: 700 }}>{savedNote}</span>}
+                {savedNote && <span style={{ marginLeft: 12, color: '#100f2e', fontWeight: 700 }}>{savedNote}</span>}
               </div>
             </form>
           </div>
